@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AACA5D60-0235-4707-90A2-81A2BDBC2FEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apresentacao</RootNamespace>
+    <AssemblyName>Apresentacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcaoNaTela.cs" />
+    <Compile Include="ClubeDataSet15.cs">
+      <DependentUpon>ClubeDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClubeDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubeDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClubeDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubeDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgendamento.Designer.cs">
+      <DependentUpon>FrmAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmItensPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmItensPagamento.Designer.cs">
+      <DependentUpon>FrmItensPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContasPagarSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContasPagarSelecionar.Designer.cs">
+      <DependentUpon>FrmContasPagarSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatrimonioSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatrimonioSelecionar.Designer.cs">
+      <DependentUpon>frmPatrimonioSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarFornecedor.Designer.cs">
+      <DependentUpon>frmCadastrarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarPatrimonio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarPatrimonio.Designer.cs">
+      <DependentUpon>frmCadastrarPatrimonio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCaixa.Designer.cs">
+      <DependentUpon>FrmCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContaReceber.Designer.cs">
+      <DependentUpon>FrmContaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDependenteCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDependenteCadastrar.Designer.cs">
+      <DependentUpon>FrmDependenteCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContasPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContasPagar.Designer.cs">
+      <DependentUpon>FrmContasPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFornecedorSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFornecedorSelecionar.Designer.cs">
+      <DependentUpon>FrmFornecedorSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmlogin.Designer.cs">
+      <DependentUpon>Frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParametro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParametro.Designer.cs">
+      <DependentUpon>FrmParametro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorio.Designer.cs">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelecionarAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelecionarAgendamento.Designer.cs">
+      <DependentUpon>FrmSelecionarAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelecionarDependente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelecionarDependente.Designer.cs">
+      <DependentUpon>FrmSelecionarDependente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelecionarMovCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelecionarMovCaixa.Designer.cs">
+      <DependentUpon>FrmSelecionarMovCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSocioCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSocioCadastrar.Designer.cs">
+      <DependentUpon>FrmSocioCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSociosSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSociosSelecionar.Designer.cs">
+      <DependentUpon>FrmSociosSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipo.Designer.cs">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewer.Designer.cs">
+      <DependentUpon>FrmViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeradorParcelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeradorParcelas.Designer.cs">
+      <DependentUpon>GeradorParcelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="selecionarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selecionarUsuario.Designer.cs">
+      <DependentUpon>selecionarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="validaCep.cs" />
+    <Compile Include="ValidaCnpj.cs" />
+    <Compile Include="ValidarCpfs.cs" />
+    <Compile Include="ValidarEmail.cs" />
+    <EmbeddedResource Include="FrmAgendamento.resx">
+      <DependentUpon>FrmAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmItensPagamento.resx">
+      <DependentUpon>FrmItensPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContasPagarSelecionar.resx">
+      <DependentUpon>FrmContasPagarSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatrimonioSelecionar.resx">
+      <DependentUpon>frmPatrimonioSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarFornecedor.resx">
+      <DependentUpon>frmCadastrarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarPatrimonio.resx">
+      <DependentUpon>frmCadastrarPatrimonio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCaixa.resx">
+      <DependentUpon>FrmCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContaReceber.resx">
+      <DependentUpon>FrmContaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDependenteCadastrar.resx">
+      <DependentUpon>FrmDependenteCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContasPagar.resx">
+      <DependentUpon>FrmContasPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFornecedorSelecionar.resx">
+      <DependentUpon>FrmFornecedorSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmlogin.resx">
+      <DependentUpon>Frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParametro.resx">
+      <DependentUpon>FrmParametro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorio.resx">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelecionarAgendamento.resx">
+      <DependentUpon>FrmSelecionarAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelecionarDependente.resx">
+      <DependentUpon>FrmSelecionarDependente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelecionarMovCaixa.resx">
+      <DependentUpon>FrmSelecionarMovCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSocioCadastrar.resx">
+      <DependentUpon>FrmSocioCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSociosSelecionar.resx">
+      <DependentUpon>FrmSociosSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipo.resx">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewer.resx">
+      <DependentUpon>FrmViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeradorParcelas.resx">
+      <DependentUpon>GeradorParcelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\relAgendamento.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\relCaixa.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\relContasPagar.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\relContasReceber.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\relContrato.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\relPatrimonio.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\relReciboPagamento.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\relSocios.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selecionarUsuario.resx">
+      <DependentUpon>selecionarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClubeDataSet15.xsc">
+      <DependentUpon>ClubeDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClubeDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClubeDataSet15.xss">
+      <DependentUpon>ClubeDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeDataSet16.xsc">
+      <DependentUpon>ClubeDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClubeDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClubeDataSet16.xss">
+      <DependentUpon>ClubeDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Negocios.TipoNegocio.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.Agendamento.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.Caixa.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.CaixaColecao.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.ContasPagar.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.ContasReceber.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.ContasReceberColecao.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.DadosRelatorioRecibo.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.Dependente.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.DependenteColecao.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.Fornecedor.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.FornecedorColecao.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.ItensParcelas.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.ItensParcelasColecao.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.Parametros.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.ParametrosColecao.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.Patrimonio.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.PatrimonioColecao.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.Socios.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.SociosColecao.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.Tipo.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.TipoColecao.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.Usuario.datasource" />
+    <None Include="Properties\DataSources\ObjetoTransferencia.UsuarioColecao.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{f67fd28a-e6eb-4183-a0a5-fbc45761b071}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjetoTransferencia\ObjetoTransferencia.csproj">
+      <Project>{13d6990d-e741-4c3b-a185-4d5f018ae71c}</Project>
+      <Name>ObjetoTransferencia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inserir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADDPESSOAR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADDPESSOAR1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping cart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
